@@ -2,6 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const { queryRag } = require('./query');
 
+const cors = require('cors');
+app.use(cors());
+
 const app = express();
 app.use(express.json());
 
