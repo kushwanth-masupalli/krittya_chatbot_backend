@@ -3,11 +3,11 @@ const express = require('express');
 const { queryRag } = require('./query');
 
 const cors = require('cors');
-app.use(cors());
+
 
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 app.post('/ask', async (req, res) => {
   try {
     const { query } = req.body;
